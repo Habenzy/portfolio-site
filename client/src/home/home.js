@@ -8,9 +8,12 @@ export default function Home(props) {
         </p>
       </div>
 
-      <div id="about"></div>
-      
-      <div id="social-links"></div>
+      <div id="about">
+        <p>Personal life stuff</p>
+        <p>Work stuff</p>
+        <p>Hobbies?</p>
+      </div>
+
     </div>
   )
 }

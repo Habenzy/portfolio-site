@@ -1,7 +1,13 @@
 export default function Nerdery(props) {
   return(
     <div>
-      Nerds
+      <div id="dandd" >
+
+      </div>
+      
+      <div id="warhammer">
+
+      </div>
     </div>
   )
 }
