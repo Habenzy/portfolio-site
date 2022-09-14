@@ -12,8 +12,8 @@ export default function Gallery(props) {
     <div class="page-center">
       <h3>Digital Art</h3>
       <div class="gallery">
-        {digArt.map((pic) => (
-          <GalleryItem source={pic.src} title={pic.title} />
+        {digArt.map((pic, index) => (
+          <GalleryItem source={pic.src} title={pic.title} key={index}/>
         ))}
       </div>
 
@@ -30,7 +30,7 @@ export default function Gallery(props) {
 function GalleryItem(props) {
   const [modalOpen, setModalOpen] = useState(false);
   return (
-    <div>
+    <div class="thumb-container">
       <img
         class="thumb"
         src={props.source}
@@ -41,7 +41,7 @@ function GalleryItem(props) {
       <h4>{props.title}</h4>
       {modalOpen && (
         <div class="pic-modal">
-          <div id="close" onClick={() => setModalOpen(false)}>
+          <div class="close" onClick={() => setModalOpen(false)}>
             X
           </div>
           <img src={props.source} alt={props.title} />

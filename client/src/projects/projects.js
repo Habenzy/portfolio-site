@@ -4,8 +4,8 @@ export default function Projects(props) {
   const [allProjects, setProjects] = useState([]);
   return (
     <div id="project-list">
-      {allProjects.map((proj) => (
-        <ProjectDetail img={proj.img} title={proj.title} desc={proj.desc} />
+      {allProjects.map((proj, index) => (
+        <ProjectDetail img={proj.img} title={proj.title} desc={proj.desc} key={index}/>
       ))}
     </div>
   );
