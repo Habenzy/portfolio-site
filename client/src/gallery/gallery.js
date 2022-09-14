@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 
 export default function Gallery(props) {
-  let [digArt, setDigArt] = useState([]);
-  let [physArt, setPhysArt] = useState([]);
+  const [digArt, setDigArt] = useState([]);
+  const [physArt, setPhysArt] = useState([]);
 
   useEffect(() => {
     //fetch from DB and set dig and phys art arrays
@@ -28,15 +28,25 @@ export default function Gallery(props) {
 }
 
 function GalleryItem(props) {
+  const [modalOpen, setModalOpen] = useState(false);
   return (
-  <div>
-    <img class="thumb" src={props.source} alt={props.title} />
+    <div>
+      <img
+        class="thumb"
+        src={props.source}
+        alt={props.title}
+        onClick={() => setModalOpen(true)}
+      />
 
-    <h4>{props.title}</h4>
-    <div class="pic-modal">
-      <div id="close">X</div>
-      <img src={props.source} alt={props.title} />
+      <h4>{props.title}</h4>
+      {modalOpen && (
+        <div class="pic-modal">
+          <div id="close" onClick={() => setModalOpen(false)}>
+            X
+          </div>
+          <img src={props.source} alt={props.title} />
+        </div>
+      )}
     </div>
-  </div>
   );
 }
