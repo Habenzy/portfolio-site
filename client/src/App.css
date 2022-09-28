@@ -61,3 +61,33 @@
     text-shadow: none;
   }
 }
+
+/* Nav Bar */
+
+#page-container nav {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 2rem;
+  align-items: center;
+  background-color: #00000a;
+}
+
+#page-container nav a {
+  text-decoration: none;
+  color: #fff;
+  text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #0af;
+}
+
+#page-container nav a:hover{
+  animation: flicker 1s infinite alternate;
+}
+
+#page-container nav #page-nav {
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
+}
