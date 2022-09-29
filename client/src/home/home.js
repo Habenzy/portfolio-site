@@ -1,6 +1,6 @@
 export default function Home(props) {
   return(
-    <div class="center-wrapper">
+    <div className="center-wrapper">
       <div id="intro" className="text-block">
         <img src="" alt="Bob's face"/>
         <p>

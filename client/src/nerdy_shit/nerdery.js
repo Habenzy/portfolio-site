@@ -6,7 +6,7 @@ export default function Nerdery(props) {
   const [wh40kStuff, setWH40kStuff] = useState([]);
 
   return (
-    <div>
+    <div className="center-wrapper">
       <p>
         Welcome to my hobby page. In addition to my many other excellent
         qualities, I'm a huge nerd, and play Warhammer 40k, and D&D (I DM one
@@ -23,7 +23,7 @@ export default function Nerdery(props) {
         </a>
       </p>
       <div id="dandd">
-        <div class="gallery">
+        <div className="gallery">
           {dndStuff.length ? (
             dndStuff.map((pic, index) => (
               <GalleryItem source={pic.src} title={pic.title} key={index} />
@@ -35,7 +35,7 @@ export default function Nerdery(props) {
       </div>
 
       <div id="warhammer">
-        <div class="gallery">
+        <div className="gallery">
           {wh40kStuff.length ? (
             wh40kStuff.map((pic, index) => (
               <GalleryItem source={pic.src} title={pic.title} key={index} />

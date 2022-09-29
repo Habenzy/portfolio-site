@@ -11,16 +11,16 @@ export default function Gallery(props) {
 
   return (
     digArt.length || physArt.length ?
-    <div class="page-center">
+    <div className="page-center">
       <h3>Digital Art</h3>
-      <div class="gallery">
+      <div className="gallery">
         {digArt.map((pic, index) => (
           <GalleryItem source={pic.src} title={pic.title} key={index}/>
         ))}
       </div>
 
       <h3>Paintings and Sketches</h3>
-      <div class="gallery">
+      <div className="gallery">
         {physArt.map((pic) => (
           <GalleryItem source={pic.src} title={pic.title} />
         ))}

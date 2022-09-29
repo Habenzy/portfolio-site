@@ -3,7 +3,7 @@ import { useState } from "react";
 export default function Projects(props) {
   const [allProjects, setProjects] = useState([]);
   return (
-    <div id="project-list">
+    <div id="project-list" className="center-wrapper">
       Coming soon...
       {allProjects.map((proj, index) => (
         <ProjectDetail img={proj.img} title={proj.title} desc={proj.desc} key={index}/>
