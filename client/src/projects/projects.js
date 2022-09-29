@@ -4,6 +4,7 @@ export default function Projects(props) {
   const [allProjects, setProjects] = useState([]);
   return (
     <div id="project-list">
+      Coming soon...
       {allProjects.map((proj, index) => (
         <ProjectDetail img={proj.img} title={proj.title} desc={proj.desc} key={index}/>
       ))}
@@ -18,6 +19,7 @@ function ProjectDetail(props) {
       <div class="proj-details">
         <img src={props.img} alt={props.title} />
         <p class="blurb">{props.desc}</p>
+        <a href={props.link}>Check out the site!</a>
       </div>
     </div>
   );
