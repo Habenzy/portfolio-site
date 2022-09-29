@@ -71,7 +71,7 @@
   height: 3rem;
   align-items: center;
   background-color: #00000a;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 #page-container nav a {
@@ -91,6 +91,33 @@
   display: flex;
   width: 40%;
   justify-content: space-between;
+}
+
+/* Global Styling */
+
+p {
+
+}
+
+a {
+  text-decoration: none;
+  color: #000
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.center-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: radial-gradient(#fff,#fff, #00000a 70%);
+}
+
+.center-wrapper > * {
+  width: 70%;
 }
 
 @import url('./home/home.css')

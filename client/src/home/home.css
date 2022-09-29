@@ -1,13 +1,4 @@
-.center-wrapper {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
-.center-wrapper > * {
-  width: 73%;
-}
 
 #intro {
   margin-top: 55px
@@ -15,4 +6,11 @@
 
 #intro img {
   float:left
+}
+
+.text-block {
+  background-color: #fffaff;
+  border-radius: 3px;
+  padding: 5px;
+  margin: 5px 0
 }
