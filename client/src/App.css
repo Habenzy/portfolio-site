@@ -93,6 +93,32 @@
   justify-content: space-between;
 }
 
+
+/* Responsive header and nav styling */
+
+@media screen and (max-width: 620px) {
+  #title-container h1 {
+    font-size: 4rem;
+  }
+
+  #h-subtitle {
+    width: 100%
+  }
+
+  #page-container nav {
+    height: auto
+  }
+
+  #page-container nav #page-nav {
+    flex-direction: column;
+    width: auto
+  }
+
+  #page-container nav #page-nav a {
+    margin: 10px 0
+  }
+}
+
 /* Global Styling */
 
 p {
