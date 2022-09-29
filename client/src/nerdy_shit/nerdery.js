@@ -8,10 +8,9 @@ export default function Nerdery(props) {
   return (
     <div>
       <p>
-        Welcome to my hobby page. I'm a huge nerd, and play Warhammer 40k, and
-        D&D (I DM one group, and play in another). Enjoy some pictures of maps,
-        minis, and some of my own homebrew lore!
+        Welcome to my hobby page. In addition to my many other excellent qualities, I'm a huge nerd, and play Warhammer 40k, and D&D (I DM one group, and play in another). Enjoy some pictures of maps, minis, and more!
       </p>
+      <p>If you're curious about my homebrew setting you can check out the lore <a href="https://www.worldanvil.com/w/the-fractured-hub-habenzy" target="_blank">here</a></p>
       <div id="dandd">
         <div class="gallery">
           {dndStuff.map((pic, index) => (
