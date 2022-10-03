@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import GalleryItem from "../global/galleryItem";
 
 export default function Gallery(props) {
-  const [digArt, setDigArt] = useState([]);
-  const [physArt, setPhysArt] = useState([]);
+  const [digArt, setDigArt] = useState([{src: "", title: "test 1"}, {src: "", title: "test 2"}, {src: "", title: "test 3"}, {src: "", title: "test 4"}]);
+  const [physArt, setPhysArt] = useState([{src: "", title: "test 1"}, {src: "", title: "test 2"}, {src: "", title: "test 3"}, {src: "", title: "test 4"}]);
 
   useEffect(() => {
     //fetch from DB and set dig and phys art arrays
