@@ -20,7 +20,7 @@ export default function Nerdery(props) {
           target="_blank"
           rel="norefferer"
         >
-          here
+          on World Anvil.
         </a>
       </p>
       <Gallery entries={dndStuff}/>
