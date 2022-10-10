@@ -71,7 +71,70 @@ export default function About(props) {
         </p>
       </div>
       <div className="text-block">
-        <p id="programming-blurb" className="text-block"></p>
+        <p id="programming-blurb" className="text-block">
+          The Burlington Code Academy, aka BCA, is a for-profit coding bootcamp,
+          originally based out of Burlington, VT, and is now a subsidiary of
+          Upright ED. I was a member of Cohort 1 (the second ever cohort,
+          numbers in JS are 0 indexed so cohort 0 was the first). Over the
+          9am-5pm, 12 week intensive course I leaned the basics of CSS, HTML,
+          and JavaScript, and then some not so basics when we dove into React,
+          Express, Server side programming with database integration,
+          encryption, and authentication. There was a bit of integration testing
+          with Cypress throughout the course, however that was more of an
+          afterthought, and often cut for the sake of time. I also learned how
+          to work in a team using Agile methodology (mostly XP based) and manage
+          a project. For the last 3 weeks of the course we built proof of
+          concept projects for real clients in the community.
+        </p>
+        <p>
+          I freelanced for a few months but apparently the folks at BCA liked having me around, as I was asked to
+          come back as a TA for the next cohort, and then fast tracked into an
+          instructor role. I developed the curriculum for, and ran our first
+          part time course, and as the main (read: only) instructor for BCAs Web
+          dev bootcamp class I helped our director of education build our custom
+          LMS, improved the curriculum by creating new content and exercises,
+          expanded the capstone projects to 4 weeks by consolidating lessons
+          students were picking up quickly (mostly the CSS and HTML), and
+          expanded on topics students often struggled with.
+        </p>
+        <p>
+          Halfway through the first full course I was teaching (Cohort 3, when I
+          say they fast tracked my to instructor, I mean they pretty much just
+          threw me right in) Covid hit, and as an in person class we had to
+          pivot fast. As a web dev course we were uniquely suited to go remote,
+          but even so that weekend was a little hectic as the Director of
+          Education and I scrambled to get everything set up. Even while going
+          remote w wanted to maintain the in-person feel of our course, and we
+          pulled it off so successfully that the company has decided to remain
+          remote to this day. On the downside our curriculum was definitely not
+          made for an online class, and the pace (as well as the 40hr/week on
+          Zoom) was difficult for students. I wrote many supplementary sources,
+          and created exercises to help students with concepts that are
+          difficult to teach when you're not in the same space, such as
+          debugging, and pair programming.
+        </p>
+        <p>
+          I loved my time at BCA, but after 3 years, 8 cohorts, and rewriting
+          the entire curriculum a couple of times I was beginning to get a bit
+          burnt out. The 50-60hr weeks (with 45 of that being spent teaching a
+          class through Zoom) and lack of vacation time certainly didn't help.
+          So when the CEO of BCA bought the company out with his new company
+          (Upright ED) I decided to go my own way.
+        </p>
+        <p>
+          Pretty much immediately after leaving BCA I got a job offer at Impulse
+          Creative as their backend developer, which I jumped on. I've always
+          enjoyed backend programming more than front end because, oddly enough,
+          it feels more creative to me. This turned out to be a mistake. I was
+          still very burnt out from BCA, and the folks at Impulse Creative had a
+          different idea of what a backend developer was. They're a Hubspot
+          based design and marketing company with a very heavy focus on the
+          marketing aspects, and very little knowledge of web development. Their
+          idea of "backend programming" is pretty much anything to do with
+          JavaScript. I learned a fair amount of Hubspot (and got 2 marketing,
+          and one developer certifications), but due to mismatched expectations
+          I decided to leave them after 6 months.
+        </p>
       </div>
     </div>
   );
