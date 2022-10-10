@@ -9,11 +9,11 @@ export default function About(props) {
           little more context about what makes me such an awesome person. Well
           you've come to the right place! I'm Bob and as the header hints at I'm
           a professional full-stack web developer. This wasn't always the case
-          though...{" "}
+          though...
         </p>
         <p>
           If you don't want to read through my life story{" "}
-          <a href="#programming-blurb">click here to jump to the section</a>
+          <a href="#programming-blurb">click here to jump to the section</a>{" "}
           where I talk about becoming a programmer, or if you want something
           even more cut and dry you can{" "}
           <a href="/current-stauss-resume.pdf" download>
