@@ -1,5 +1,5 @@
-import { useState } from "react";
-import GalleryItem from "../global/galleryItem";
+import { useState, useEffect } from "react";
+import Gallery from "../gallery/gallery";
 
 export default function Nerdery(props) {
   const [dndStuff, setDnDStuff] = useState([]);
@@ -9,7 +9,7 @@ export default function Nerdery(props) {
     <div className="center-wrapper">
       <p>
         Welcome to my hobby page. In addition to my many other excellent
-        qualities, I'm a huge nerd, and play Warhammer 40k, and D&D (I DM one
+        qualities, I'm also a huge nerd, and play Warhammer 40k, and D&D (I DM one
         group, and play in another). Enjoy some pictures of maps, minis, and
         more!
       </p>
@@ -18,33 +18,12 @@ export default function Nerdery(props) {
         <a
           href="https://www.worldanvil.com/w/the-fractured-hub-habenzy"
           target="_blank"
+          rel="norefferer"
         >
           here
         </a>
       </p>
-      <div id="dandd">
-        <div className="gallery">
-          {dndStuff.length ? (
-            dndStuff.map((pic, index) => (
-              <GalleryItem source={pic.src} title={pic.title} key={index} />
-            ))
-          ) : (
-            <p className="construction">Pictures coming soon!</p>
-          )}
-        </div>
-      </div>
-
-      <div id="warhammer">
-        <div className="gallery">
-          {wh40kStuff.length ? (
-            wh40kStuff.map((pic, index) => (
-              <GalleryItem source={pic.src} title={pic.title} key={index} />
-            ))
-          ) : (
-            <p className="construction">Pictures coming soon!</p>
-          )}
-        </div>
-      </div>
+      <Gallery entries={dndStuff}/>
     </div>
   );
 }

@@ -119,7 +119,7 @@
   }
 }
 
-/* Global Styling */
+/* Misc Global Styling */
 
 p {
 
@@ -146,9 +146,5 @@ a:hover {
   width: 70%;
 }
 
-.gallery {
-  display: grid;
-  grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
-}
-
-@import url('./home/home.css')
+@import url('./home/home.css');
+@import url('./about/about.css');

@@ -1,33 +1,50 @@
-import { useState, useEffect } from "react";
-import GalleryItem from "../global/galleryItem";
+import { useState } from "react";
+import GalleryItem from "./galleryItem";
 
 export default function Gallery(props) {
-  const [digArt, setDigArt] = useState([{src: "", title: "test 1"}, {src: "", title: "test 2"}, {src: "", title: "test 3"}, {src: "", title: "test 4"}]);
-  const [physArt, setPhysArt] = useState([{src: "", title: "test 1"}, {src: "", title: "test 2"}, {src: "", title: "test 3"}, {src: "", title: "test 4"}]);
+  let [modelOpen, setModelOpen] = useState(false);
+  let [focused, setFocused] = useState(0);
 
-  useEffect(() => {
-    //fetch from DB and set dig and phys art arrays
-  });
-
-  return (
-    digArt.length || physArt.length ?
-    <div className="page-center">
-      <h3>Digital Art</h3>
+  return props.entries.length ? (
+    <div>
       <div className="gallery">
-        {digArt.map((pic, index) => (
-          <GalleryItem source={pic.src} title={pic.title} key={index}/>
+        {props.entries.map((pic, index) => (
+          <GalleryItem
+            source={pic.src}
+            title={pic.title}
+            key={index}
+            setModal={setModelOpen}
+          />
         ))}
       </div>
-
-      <h3>Paintings and Sketches</h3>
-      <div className="gallery">
-        {physArt.map((pic) => (
-          <GalleryItem source={pic.src} title={pic.title} />
-        ))}
+      <div className="modal">
+        {focused - 1 >= 0 && (
+          <button
+            onClick={() => {
+              setFocused(focused - 1);
+            }}
+          >
+            Previous
+          </button>
+        )}
+        <img
+          src={props.entries[focused].src}
+          alt={props.entries[focused].title}
+        />
+        <p>{props.entries[focused].blurb}</p>
+        {props.entries[focused + 1] && (
+          <button
+            onClick={() => {
+              setFocused(focused + 1);
+            }}
+          >
+            Next
+          </button>
+        )}
+        <button onClick={() => {setModelOpen(false)}}>X</button>
       </div>
-    </div> :
-    <div>Coming soon...</div>
-
+    </div>
+  ) : (
+    <div>Images Coming Soon... Maybe...</div>
   );
 }
-
