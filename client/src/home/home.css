@@ -1,16 +1,33 @@
 
-
-#intro {
-  margin-top: 55px
+#intro-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 40px;
+  min-height: 900px
 }
 
-#intro img {
-  float:left
-}
-
-.text-block {
+.intro-block {
   background-color: #fffaff;
-  border-radius: 3px;
-  padding: 5px;
-  margin: 5px 0
+  border-radius: 50%;
+  padding: 70px;
+  margin: 5px 0;
+  max-width: 25vw;
+  opacity: .6
+}
+
+.intro-block:hover {
+  opacity: .8
+}
+
+.right {
+  align-self: flex-end
+}
+
+@media screen and (max-width: 620px) {
+  .intro-block {
+    max-width: 100%;
+    padding: 5px;
+    border-radius: 3px;
+  }
 }

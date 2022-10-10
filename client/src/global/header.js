@@ -19,7 +19,7 @@ export default function Header(props) {
       <nav>
         <Link to="/">Home</Link>
         <div id="page-nav">
-          <Link to="gallery">Art Gallery</Link>
+          <Link to="about">About Me</Link>
           <Link to="projects">Projects</Link>
           <Link to="nerdery">Nerdy Things</Link>
         </div>

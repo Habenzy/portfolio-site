@@ -32,7 +32,7 @@ export default function About(props) {
           <a href="https://www.phantomtheater.org/" target="_blank">
             Phantom
           </a>
-          , which I am now the technical director of, more than 15 years later.
+          , which I am now the technical director of more than 15 years later.
         </p>
       </div>
       <div className="text-block">
