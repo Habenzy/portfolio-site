@@ -4,7 +4,7 @@ export default function Home(props) {
       <div id="intro-layout">
       <div className="intro-block">
         <h2>Who Am I?</h2>
-        <p>I am Robert Russell Stauss, but please call me Bob. I'm a full stack web developer, artist, jack of all trades, and lover of life. Born and raised on a small farm in Vermont I still call this state my home. My career history is a bit eclectic, with stints as a lighting tech, jewelry maker, private investigator, and a fair amount of restaurant work. I now build websites as my main profession</p>
+        <p>I am Robert Russell Stauss, but please call me Bob. I'm a full stack web developer, artist, jack of all trades, and lover of life. Born and raised on a small farm in Vermont I still call this state my home. My career history is a bit eclectic, with stints as a lighting tech, jewelry maker, private investigator, and a fair amount of restaurant work. I now build websites as my main profession.</p>
       </div>
 
       <div className="intro-block right">
