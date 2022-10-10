@@ -17,7 +17,8 @@
 }
 
 .intro-block:hover {
-  opacity: .8
+  opacity: .8;
+  cursor: help
 }
 
 .right {

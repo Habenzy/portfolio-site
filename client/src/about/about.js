@@ -7,12 +7,15 @@ export default function About(props) {
           Hello, and welcome to my little corner of the internet. You might be
           wondering "just who the heck is this guy?" or maybe you just want a
           little more context about what makes me such an awesome person. Well
-          you've come to the right place. I'm Robert Russell Stauss, but you can
-          just call me Bob, and as the header hints at I'm a professional web
-          developer. This wasn't always the case though. If you don't want to
-          read through my life story <a href="#programming-blurb">click here</a>{" "}
-          to jump to the section where I talk about becoming a programmer, or if
-          you want something even more cut and dry you can{" "}
+          you've come to the right place! I'm Bob and as the header hints at I'm
+          a professional full-stack web developer. This wasn't always the case
+          though...{" "}
+        </p>
+        <p>
+          If you don't want to read through my life story{" "}
+          <a href="#programming-blurb">click here to jump to the section</a>
+          where I talk about becoming a programmer, or if you want something
+          even more cut and dry you can{" "}
           <a href="/current-stauss-resume.pdf" download>
             click here to download my resume.
           </a>
