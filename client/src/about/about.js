@@ -87,15 +87,16 @@ export default function About(props) {
           concept projects for real clients in the community.
         </p>
         <p>
-          I freelanced for a few months but apparently the folks at BCA liked having me around, as I was asked to
-          come back as a TA for the next cohort, and then fast tracked into an
-          instructor role. I developed the curriculum for, and ran our first
-          part time course, and as the main (read: only) instructor for BCAs Web
-          dev bootcamp class I helped our director of education build our custom
-          LMS, improved the curriculum by creating new content and exercises,
-          expanded the capstone projects to 4 weeks by consolidating lessons
-          students were picking up quickly (mostly the CSS and HTML), and
-          expanded on topics students often struggled with.
+          I freelanced for a few months but apparently the folks at BCA liked
+          having me around, as I was asked to come back as a TA for the next
+          cohort, and then fast tracked into an instructor role. I developed the
+          curriculum for, and ran our first part time course, and as the main
+          (read: only) instructor for BCAs Web dev bootcamp class I helped our
+          director of education build our custom LMS, improved the curriculum by
+          creating new content and exercises, expanded the capstone projects to
+          4 weeks by consolidating lessons students were picking up quickly
+          (mostly the CSS and HTML), and expanded on topics students often
+          struggled with.
         </p>
         <p>
           Halfway through the first full course I was teaching (Cohort 3, when I
@@ -122,18 +123,19 @@ export default function About(props) {
           (Upright ED) I decided to go my own way.
         </p>
         <p>
-          Pretty much immediately after leaving BCA I got a job offer at Impulse
-          Creative as their backend developer, which I jumped on. I've always
-          enjoyed backend programming more than front end because, oddly enough,
-          it feels more creative to me. This turned out to be a mistake. I was
-          still very burnt out from BCA, and the folks at Impulse Creative had a
-          different idea of what a backend developer was. They're a Hubspot
-          based design and marketing company with a very heavy focus on the
-          marketing aspects, and very little knowledge of web development. Their
-          idea of "backend programming" is pretty much anything to do with
-          JavaScript. I learned a fair amount of Hubspot (and got 2 marketing,
-          and one developer certifications), but due to mismatched expectations
-          I decided to leave them after 6 months.
+          Within a week of leaving BCA I got a job offer at Impulse Creative as
+          their backend developer, and I jumped on it. I've always enjoyed
+          backend programming more than front end (even though I'm probably
+          better at front end) because, oddly enough, it feels more creative to
+          me. Accepting this job turned out to be a mistake. The folks at
+          Impulse Creative are great people, but they had a different idea of
+          what a backend developer was. They're a Hubspot based design and
+          marketing company with a very heavy focus on the marketing aspects,
+          and very little knowledge of web development. I learned a whole lot
+          about Hubspot, but their idea of "backend programming" is pretty much
+          anything JavaScript. It was a good learning experience, but it wasn't
+          really what I was looking to be doing. So due to mismatched
+          expectations I decided to leave them after 6 months.
         </p>
       </div>
     </div>
