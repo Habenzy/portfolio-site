@@ -132,7 +132,7 @@ export default function About(props) {
           what a backend developer was. They're a Hubspot based design and
           marketing company with a very heavy focus on the marketing aspects,
           and very little knowledge of web development. I learned a whole lot
-          about Hubspot, but their idea of "backend programming" is pretty much
+          about Hubspot, but their idea of "backend programming" was pretty much
           anything JavaScript. It was a good learning experience, but it wasn't
           really what I was looking to be doing. So due to mismatched
           expectations I decided to leave them after 6 months.
