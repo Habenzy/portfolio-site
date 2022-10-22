@@ -105,7 +105,7 @@ export default function About(props) {
           pivot fast. As a web dev course we were uniquely suited to go remote,
           but even so that weekend was a little hectic as the Director of
           Education and I scrambled to get everything set up. Even while going
-          remote w wanted to maintain the in-person feel of our course, and we
+          remote we wanted to maintain the in-person feel of our course, and we
           pulled it off so successfully that the company has decided to remain
           remote to this day. On the downside our curriculum was definitely not
           made for an online class, and the pace (as well as the 40hr/week on
@@ -129,12 +129,12 @@ export default function About(props) {
           better at front end) because, oddly enough, it feels more creative to
           me. Accepting this job turned out to be a mistake. The folks at
           Impulse Creative are great people, but they had a different idea of
-          what a backend developer was. They're a Hubspot based design and
+          what a backend developer is than I do. They're a Hubspot based design and
           marketing company with a very heavy focus on the marketing aspects,
           and very little knowledge of web development. I learned a whole lot
           about Hubspot, but their idea of "backend programming" was pretty much
           anything JavaScript. It was a good learning experience, but it wasn't
-          really what I was looking to be doing. So due to mismatched
+          really what I was looking to be doing, and so due to mismatched
           expectations I decided to leave them after 6 months.
         </p>
       </div>
