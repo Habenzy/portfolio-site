@@ -3,7 +3,10 @@ import Gallery from "../gallery/gallery";
 
 export default function Nerdery(props) {
   const [dndStuff, setDnDStuff] = useState([]);
-  const [wh40kStuff, setWH40kStuff] = useState([]);
+
+  useEffect(() => {
+    //fetch from firebase and set as DndDStuff
+  }, [])
 
   return (
     <div className="center-wrapper">
