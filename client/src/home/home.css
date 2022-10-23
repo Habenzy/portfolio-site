@@ -1,14 +1,14 @@
-
 #intro-layout {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   margin-top: 40px;
-  min-height: 900px
+  min-height: 900px;
+  width: 70%
 }
 
 .intro-block {
-  background-color: #fffaff;
+  background-color: #fff;
   border-radius: 50%;
   padding: 70px;
   margin: 5px 0;
