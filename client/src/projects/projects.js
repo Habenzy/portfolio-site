@@ -32,7 +32,7 @@ function ProjectDetail(props) {
     <div class="project-disp">
       <h2 class="proj-title">{props.title}</h2>
       <div class="proj-details">
-        <img src={props.img} alt={props.title} />
+        {/* <img src={props.img} alt={props.title} /> */}
         <p class="blurb">{props.desc}</p>
         <a href={props.link}>{props.linkText}</a>
       </div>

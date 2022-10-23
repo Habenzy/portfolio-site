@@ -1,0 +1,17 @@
+@media screen and (min-width: 620px) {
+  #project-list > :nth-child(odd) {
+    align-self: flex-start;
+    margin-left: 15vw;
+  }
+
+  #project-list > :nth-child(even) {
+    align-self: flex-end;
+    margin-right: 15vw;
+  }
+}
+.project-disp {
+  background-color: azure;
+  border-radius: 5px;
+  margin-top: 40px;
+  width: 50vw;
+}
