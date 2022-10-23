@@ -143,7 +143,7 @@ a:hover {
 }
 
 .center-wrapper > * {
-  width: 70%;
+  max-width: 70%;
 }
 
 @import url('./home/home.css');
