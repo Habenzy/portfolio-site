@@ -3,6 +3,7 @@ export default function Uploader(props) {
   let uploadEntry = (evt) => {
     evt.preventDefault()
   }
+  
   return (
     <form onSubmit={uploadEntry}>
       <input type='file' name="image" />
