@@ -5,3 +5,8 @@
   padding: 5px;
   margin: 5px 0;
 }
+
+#intro img {
+  float: left;
+  height: 250px
+}
