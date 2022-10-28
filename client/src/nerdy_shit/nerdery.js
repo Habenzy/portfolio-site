@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { firestore } from "../firebase/firebase";
+// import { firestore } from "../firebase/firebase";
 import Gallery from "../gallery/gallery";
 
 const collectAllIdsAndDocs = (doc) => {
@@ -11,15 +11,15 @@ export default function Nerdery(props) {
 
   useEffect(async () => {
     //fetch from firebase and set as DndDStuff
-    const dataRef = firestore.collection('shows')
-    const dataSnapshot = await showsRef.get()
+    // const dataRef = firestore.collection('shows')
+    // const dataSnapshot = await showsRef.get()
 
 
-    const allItemsArray = dataSnapshot.docs.map(collectAllIdsAndDocs)
+    // const allItemsArray = dataSnapshot.docs.map(collectAllIdsAndDocs)
 
-    console.log(allItemsArray)
+    // console.log(allItemsArray)
 
-    setDnDStuff(allItemsArray)
+    // setDnDStuff(allItemsArray)
   }, [])
 
   return (
