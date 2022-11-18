@@ -33,9 +33,8 @@ export default function About(props) {
           sadly shut down now). I also started running lights and sound for a
           little local theater called{" "}
           <a href="https://www.phantomtheater.org/" target="_blank">
-            Phantom
+            Phantom.
           </a>
-          , which I am now the technical director of more than 15 years later.
         </p>
       </div>
       <div className="text-block">
@@ -53,7 +52,7 @@ export default function About(props) {
           batch and prioritize tasks, customer service skills, and how to make a
           really good sandwich. In the middle of my restaurant days I moved out
           to Utah for 1. cheap rent, and 2. great skiing. These were the dark
-          days, but lead me to where I am now.
+          days, but led me to where I am now.
         </p>
         <p>
           In Utah I continued with the restaurant work, but I also picked up a
@@ -125,17 +124,15 @@ export default function About(props) {
         <p>
           Within a week of leaving BCA I got a job offer at Impulse Creative as
           their backend developer, and I jumped on it. I've always enjoyed
-          backend programming more than front end (even though I'm probably
-          better at front end) because, oddly enough, it feels more creative to
+          backend programming more than front end because, oddly enough, it feels more creative to
           me. Accepting this job turned out to be a mistake. The folks at
-          Impulse Creative are great people, but they had a different idea of
+          Impulse Creative are great people, but they had a very different idea of
           what a backend developer is than I do. They're a Hubspot based design and
           marketing company with a very heavy focus on the marketing aspects,
           and very little knowledge of web development. I learned a whole lot
           about Hubspot, but their idea of "backend programming" was pretty much
           anything JavaScript. It was a good learning experience, but it wasn't
-          really what I was looking to be doing, and so due to mismatched
-          expectations I decided to leave them after 6 months.
+          really what I was looking to be doing, and so I decided to leave them after 6 months.
         </p>
       </div>
     </div>
