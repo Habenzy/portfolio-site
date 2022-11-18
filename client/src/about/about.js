@@ -2,7 +2,7 @@ export default function About(props) {
   return (
     <div className="center-wrapper">
       <div id="intro" className="text-block">
-        <img src="" alt="Bob's face" />
+        <img src="/bob_face.jpg" alt="Bob's face" />
         <p>
           Hello, and welcome to my little corner of the internet. You might be
           wondering "just who the heck is this guy?" or maybe you just want a
