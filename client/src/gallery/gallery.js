@@ -6,7 +6,7 @@ export default function Gallery(props) {
   let [focused, setFocused] = useState(0);
 
   return props.entries.length ? (
-    <div>
+    <div id="gallery-container">
       <div className="gallery">
         {props.entries.map((pic, index) => {
           return <GalleryItem
