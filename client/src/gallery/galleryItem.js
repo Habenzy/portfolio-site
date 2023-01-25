@@ -8,7 +8,10 @@ export default function GalleryItem(props) {
         class="thumb"
         src={props.source}
         alt={props.title}
-        onClick={() => props.setModal("model-open")}
+        onClick={() => {
+          props.setModal("model-open")
+          props.setFocus(props.galleryPos)
+        }}
       />
     </div>
   );

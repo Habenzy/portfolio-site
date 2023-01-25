@@ -13,11 +13,20 @@ export default function Gallery(props) {
             source={pic.url}
             title={pic.title}
             key={index}
+            galleryPos={index}
             setModal={setModel}
+            setFocus={setFocused}
           />
   })}
       </div>
       <div className={model}>
+        
+        <img
+          src={props.entries[focused].url}
+          alt={props.entries[focused].title}
+        />
+        <p>{props.entries[focused].blurb}</p>
+        <div className="nav-controls">
         {focused - 1 >= 0 && (
           <button
             onClick={() => {
@@ -27,12 +36,6 @@ export default function Gallery(props) {
             Previous
           </button>
         )}
-        <img
-          src={props.entries[focused].url}
-          alt={props.entries[focused].title}
-        />
-        <p>{props.entries[focused].blurb}</p>
-        <div className="nav-controls">
         {props.entries[focused + 1] && (
           <button
             onClick={() => {

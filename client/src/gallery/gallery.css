@@ -46,4 +46,5 @@ img.thumb {
 .nav-controls {
   display: flex;
   justify-content: space-between;
+  max-width: 50vw
 }
