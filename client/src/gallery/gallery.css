@@ -1,4 +1,30 @@
+/* Overall layout */
 .gallery {
   display: grid;
   grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* Gallery entries */
+.thumb-container {
+  max-width: 200px;
+  overflow: hidden;
+}
+
+img.thumb {
+  height: 200px;
+  width: auto;
+}
+
+/* Model display */
+
+.model-open {
+  display: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%
+};
+
+.model-closed {
+  display: none;
 }

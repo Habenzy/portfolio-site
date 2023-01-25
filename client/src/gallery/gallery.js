@@ -2,7 +2,7 @@ import { useState } from "react";
 import GalleryItem from "./galleryItem";
 
 export default function Gallery(props) {
-  let [modelOpen, setModelOpen] = useState(false);
+  let [model, setModel] = useState("model-closed");
   let [focused, setFocused] = useState(0);
 
   return props.entries.length ? (
@@ -13,11 +13,11 @@ export default function Gallery(props) {
             source={pic.url}
             title={pic.title}
             key={index}
-            setModal={setModelOpen}
+            setModal={setModel}
           />
   })}
       </div>
-      <div className="modal">
+      <div className={model}>
         {focused - 1 >= 0 && (
           <button
             onClick={() => {
@@ -28,7 +28,7 @@ export default function Gallery(props) {
           </button>
         )}
         <img
-          src={props.entries[focused].src}
+          src={props.entries[focused].url}
           alt={props.entries[focused].title}
         />
         <p>{props.entries[focused].blurb}</p>
@@ -41,7 +41,7 @@ export default function Gallery(props) {
             Next
           </button>
         )}
-        <button onClick={() => {setModelOpen(false)}}>X</button>
+        <button onClick={() => {setModel('model-closed')}}>X</button>
       </div>
     </div>
   ) : (
