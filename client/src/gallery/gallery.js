@@ -32,6 +32,7 @@ export default function Gallery(props) {
           alt={props.entries[focused].title}
         />
         <p>{props.entries[focused].blurb}</p>
+        <div className="nav-controls">
         {props.entries[focused + 1] && (
           <button
             onClick={() => {
@@ -42,6 +43,7 @@ export default function Gallery(props) {
           </button>
         )}
         <button onClick={() => {setModel('model-closed')}}>X</button>
+        </div>
       </div>
     </div>
   ) : (
