@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-// import { firestore } from "../firebase/firebase";
+import { collection, getDocs } from "firebase/firestore";
+import { firestore } from "../firebase/firebase_config";
 import Gallery from "../gallery/gallery";
 
 const collectAllIdsAndDocs = (doc) => {
@@ -8,19 +9,17 @@ const collectAllIdsAndDocs = (doc) => {
 
 export default function Nerdery(props) {
   const [dndStuff, setDnDStuff] = useState([]);
+  
 
-  useEffect(async () => {
-    //fetch from firebase and set as DndDStuff
-    // const dataRef = firestore.collection('shows')
-    // const dataSnapshot = await showsRef.get()
-
-
-    // const allItemsArray = dataSnapshot.docs.map(collectAllIdsAndDocs)
-
-    // console.log(allItemsArray)
-
-    // setDnDStuff(allItemsArray)
-  }, [])
+  useEffect(() => {
+    getDocs(collection(firestore, 'nerdery')).then((querySnapshot) => {
+      let imgData = [];
+      querySnapshot.forEach((doc) => {
+        imgData.push(doc.data());
+      });
+      setDnDStuff(imgData);
+    });
+  }, []);
 
   return (
     <div className="center-wrapper">
