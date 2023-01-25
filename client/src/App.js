@@ -8,6 +8,7 @@ import Home from "./home/home";
 import About from "./about/about";
 import Nerdery from "./nerdy_shit/nerdery";
 import Projects from "./projects/projects";
+import Uploader from "./db_management/UploadPortal"
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/about" element={<About />}></Route>
           <Route path="/nerdery" element={<Nerdery />}></Route>
           <Route path="/projects" element={<Projects />} ></Route>
+          <Route path="/admin" element={<Uploader />} ></Route>
         </Routes>
 
         <Footer />
