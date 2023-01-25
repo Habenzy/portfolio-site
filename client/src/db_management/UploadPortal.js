@@ -70,7 +70,7 @@ export default function Uploader(props) {
       <input
         type="file"
         name="image"
-        value={img}
+
         onChange={(evt) => setImg(evt.target.files[0])}
       />
       <input
