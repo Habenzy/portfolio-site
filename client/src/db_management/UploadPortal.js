@@ -34,7 +34,7 @@ export default function Uploader(props) {
     let imgRef = ref(galleryRef, img.name);
     console.log(imgRef);
     const uploadTask = uploadBytesResumable(imgRef, img);
-
+//upload process is going through, but the wrong file is uploaded. Likely not targeting the correct item in form
     uploadTask.on(
       "state_changed",
       (snapShot) => {
@@ -71,7 +71,7 @@ export default function Uploader(props) {
         type="file"
         name="image"
         value={img}
-        onChange={(evt) => setImg(evt.target.value)}
+        onChange={(evt) => setImg(evt.target.files[0])}
       />
       <input
         type="text"
