@@ -38,7 +38,7 @@ export default function Uploader(props) {
             url: downloadURL,
           };
 
-          setDoc(doc(firestore, gallery, entry.name), entry);
+          setDoc(doc(firestore, gallery, entry.title), entry);
 
           setTitle("");
           setBlurb("");
@@ -51,8 +51,8 @@ export default function Uploader(props) {
   return (
     <form onSubmit={uploadEntry}>
       <input type='file' name="image" value={img} onChange={(evt) => setImg(evt.target.value)}/>
-      <input type="text" name="title" value={title} onChange={(evt) => setTitle(evt.target.value)}/>
-      <input type="text" name="blurb" value={blurb} onChange={(evt) => setBlurb(evt.target.value)}/>
+      <input type="text" name="title" placeholder="Title" value={title} onChange={(evt) => setTitle(evt.target.value)}/>
+      <input type="text" name="blurb" placeholder="Blurb" value={blurb} onChange={(evt) => setBlurb(evt.target.value)}/>
       <input type="submit" />
     </form>
   )
