@@ -35,6 +35,10 @@ img.thumb {
   background-color: rgba(0, 0, 0, .7);
 }
 
+.model-open > img {
+  max-width: 80vw;
+}
+
 .model-closed {
   display: none;
 }
