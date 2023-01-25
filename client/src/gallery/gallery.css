@@ -18,12 +18,12 @@ img.thumb {
 /* Model display */
 
 .model-open {
-  display: absolute;
+  position: absolute;
   left: 0;
   right: 0;
   margin: auto;
-  width: 100%
-};
+  width: 100%;
+}
 
 .model-closed {
   display: none;
