@@ -8,14 +8,15 @@ export default function Gallery(props) {
   return props.entries.length ? (
     <div>
       <div className="gallery">
-        {props.entries.map((pic, index) => (
-          <GalleryItem
+        {props.entries.map((pic, index) => {
+          console.log(pic)
+          return <GalleryItem
             source={pic.src}
             title={pic.title}
             key={index}
             setModal={setModelOpen}
           />
-        ))}
+  })}
       </div>
       <div className="modal">
         {focused - 1 >= 0 && (
