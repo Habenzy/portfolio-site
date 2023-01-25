@@ -9,9 +9,8 @@ export default function Gallery(props) {
     <div>
       <div className="gallery">
         {props.entries.map((pic, index) => {
-          console.log(pic)
           return <GalleryItem
-            source={pic.src}
+            source={pic.url}
             title={pic.title}
             key={index}
             setModal={setModelOpen}
