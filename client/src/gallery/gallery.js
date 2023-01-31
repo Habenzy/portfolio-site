@@ -9,46 +9,56 @@ export default function Gallery(props) {
     <div id="gallery-container">
       <div className="gallery">
         {props.entries.map((pic, index) => {
-          return <GalleryItem
-            source={pic.url}
-            title={pic.title}
-            key={index}
-            galleryPos={index}
-            setModal={setModel}
-            setFocus={setFocused}
-          />
-  })}
+          return (
+            <GalleryItem
+              source={pic.url}
+              title={pic.title}
+              key={index}
+              galleryPos={index}
+              setModal={setModel}
+              setFocus={setFocused}
+            />
+          );
+        })}
       </div>
-      <div className={`model ${model}`} onClick={() => {setModel('model-closed')}}>
-        
+      <div
+        className={`model ${model}`}
+        onClick={() => {
+          setModel("model-closed");
+        }}
+      >
         <img
           src={props.entries[focused].url}
           alt={props.entries[focused].title}
         />
         <p>{props.entries[focused].blurb}</p>
         <div className="nav-controls">
-        {focused - 1 >= 0 && (
-          <button
-          className="nav-button previous-button"
-            onClick={(evt) => {
-              evt.stopPropagation()
-              setFocused(focused - 1);
-            }}
-          >
-            Previous
-          </button>
-        )}
-        {props.entries[focused + 1] && (
-          <button
-          className="nav-button next-button"
-            onClick={(evt) => {
-              evt.stopPropagation()
-              setFocused(focused + 1);
-            }}
-          >
-            Next
-          </button>
-        )}
+          {focused - 1 >= 0 ? (
+            <button
+              className="nav-button previous-button"
+              onClick={(evt) => {
+                evt.stopPropagation();
+                setFocused(focused - 1);
+              }}
+            >
+              Previous
+            </button>
+          ) : (
+            <button className="nav-button no-nav">X</button>
+          )}
+          {props.entries[focused + 1] ? (
+            <button
+              className="nav-button next-button"
+              onClick={(evt) => {
+                evt.stopPropagation();
+                setFocused(focused + 1);
+              }}
+            >
+              Next
+            </button>
+          ) : (
+            <button className="nav-button no-nav">X</button>
+          )}
         </div>
       </div>
     </div>
