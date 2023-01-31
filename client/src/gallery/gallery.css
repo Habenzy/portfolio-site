@@ -1,7 +1,4 @@
 /* Overall layout */
-#gallery-container {
-  position: relative;
-}
 
 .gallery {
   display: grid;
@@ -30,8 +27,7 @@ img.thumb {
   left: 0;
   right: 0;
   top: 0;
-  bottom: 0;
-  width: 100%;
+  padding-top: 200px;
   background-color: rgba(0, 0, 0, .7);
 }
 
@@ -39,12 +35,27 @@ img.thumb {
   max-width: 80vw;
 }
 
+.model-open > p {
+  background-color: rgba(255, 255, 254, 0.6);
+  padding: 4px;
+  border-radius: 4px;
+}
+
 .model-closed {
   display: none;
 }
 
 .nav-controls {
+  position: absolute;
   display: flex;
   justify-content: space-between;
-  max-width: 50vw
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.nav-controls .nav-button {
+  height: 100%;
+  width: 8vw
 }

@@ -19,7 +19,7 @@ export default function Gallery(props) {
           />
   })}
       </div>
-      <div className={model}>
+      <div className={`model ${model}`} onClick={() => {setModel('model-closed')}}>
         
         <img
           src={props.entries[focused].url}
@@ -29,7 +29,9 @@ export default function Gallery(props) {
         <div className="nav-controls">
         {focused - 1 >= 0 && (
           <button
-            onClick={() => {
+          className="nav-button previous-button"
+            onClick={(evt) => {
+              evt.stopPropagation()
               setFocused(focused - 1);
             }}
           >
@@ -38,14 +40,15 @@ export default function Gallery(props) {
         )}
         {props.entries[focused + 1] && (
           <button
-            onClick={() => {
+          className="nav-button next-button"
+            onClick={(evt) => {
+              evt.stopPropagation()
               setFocused(focused + 1);
             }}
           >
             Next
           </button>
         )}
-        <button onClick={() => {setModel('model-closed')}}>X</button>
         </div>
       </div>
     </div>
