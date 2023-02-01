@@ -23,13 +23,13 @@ export default function Nerdery(props) {
 
   return (
     <div className="center-wrapper">
-      <p>
+      <p className="blurb">
         Welcome to my hobby page. In addition to my many other excellent
         qualities, I'm also a huge nerd, and play Warhammer 40k, and D&D (I DM one
         group, and play in another). Enjoy some pictures of maps, minis, and
         more!
       </p>
-      <p>
+      <p className="blurb">
         If you're curious about my homebrew setting you can check out the lore{" "}
         <a
           href="https://www.worldanvil.com/w/the-fractured-hub-habenzy"
