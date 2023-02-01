@@ -3,10 +3,6 @@ import { collection, getDocs } from "firebase/firestore";
 import { firestore } from "../firebase/firebase_config";
 import Gallery from "../gallery/gallery";
 
-const collectAllIdsAndDocs = (doc) => {
-  return { id: doc.id, ...doc.data() };
-};
-
 export default function Nerdery(props) {
   const [dndStuff, setDnDStuff] = useState([]);
   
@@ -23,11 +19,11 @@ export default function Nerdery(props) {
 
   return (
     <div className="center-wrapper">
-      <p className="blurb">
+      <p className="blurb top-box">
         Welcome to my hobby page. In addition to my many other excellent
         qualities, I'm also a huge nerd, and play Warhammer 40k, and D&D (I DM one
         group, and play in another). Enjoy some pictures of maps, minis, and
-        more!
+        more! That all being said the true purpose of this gallery is to showcase this sweet, scratch built, React image gallery. It's modular! It's repeatable!  It's connected to Firebase, and it's got a hidden admin portal (auth secured) that lets me easily add new images (and will eventually have full CRUD functionality so I can fix spelling mistakes) without having to edit any code, or directly access the database!
       </p>
       <p className="blurb">
         If you're curious about my homebrew setting you can check out the lore{" "}
