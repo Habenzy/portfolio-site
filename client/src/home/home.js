@@ -14,7 +14,7 @@ export default function Home(props) {
             setTop("anim-in");
           }}
           onMouseLeave={(evt) => {
-            setTop("anim-out");
+            setTop("anim-out no-anim");
           }}
         >
           <h2>Who Am I?</h2>
@@ -34,7 +34,7 @@ export default function Home(props) {
             setMid("anim-in");
           }}
           onMouseLeave={(evt) => {
-            setMid("anim-out");
+            setMid("anim-out no-anim");
           }}
         >
           <h2>What Am I Doing Here?</h2>
@@ -57,7 +57,7 @@ export default function Home(props) {
             setBottom("anim-in");
           }}
           onMouseLeave={(evt) => {
-            setBottom("anim-out");
+            setBottom("anim-out no-anim");
           }}
         >
           <h2>
