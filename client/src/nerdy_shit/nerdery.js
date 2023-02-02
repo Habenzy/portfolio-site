@@ -5,7 +5,6 @@ import Gallery from "../gallery/gallery";
 
 export default function Nerdery(props) {
   const [dndStuff, setDnDStuff] = useState([]);
-  
 
   useEffect(() => {
     getDocs(collection(firestore, 'nerdery')).then((querySnapshot) => {
