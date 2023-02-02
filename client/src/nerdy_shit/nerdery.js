@@ -18,13 +18,13 @@ export default function Nerdery(props) {
 
   return (
     <div className="center-wrapper">
-      <p className="blurb top-box">
+      <p className="gal-blurb top-box">
         Welcome to my hobby page. In addition to my many other excellent
         qualities, I'm also a huge nerd, and play Warhammer 40k, and D&D (I DM one
         group, and play in another). Enjoy some pictures of maps, minis, and
         more! That all being said the true purpose of this gallery is to showcase this sweet, scratch built, React image gallery. It's modular! It's repeatable!  It's connected to Firebase, and it's got a hidden admin portal (auth secured) that lets me easily add new images (and will eventually have full CRUD functionality so I can fix spelling mistakes) without having to edit any code, or directly access the database!
       </p>
-      <p className="blurb">
+      <p className="gal-blurb">
         If you're curious about my homebrew setting you can check out the lore{" "}
         <a
           href="https://www.worldanvil.com/w/the-fractured-hub-habenzy"
