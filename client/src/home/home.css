@@ -13,13 +13,21 @@
   padding: 70px;
   margin: 5px 0;
   max-width: 25vw;
-  opacity: .6
+  opacity: .7
 }
 
 .intro-block:hover {
   opacity: 1;
   cursor: help
 }
+
+.no-anim {
+  opacity: 0
+}
+
+.anim-in {}
+
+.anim-out {}
 
 .right {
   align-self: flex-end
