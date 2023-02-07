@@ -18,7 +18,8 @@ export default function About(props) {
           even more cut and dry you can{" "}
           <a href="/current-stauss-resume.pdf" download>
             click here to download my resume.
-          </a>
+          </a>{" "}
+          You can also <a href="https://github.com/Habenzy">Click here</a> to check out my github.
         </p>
       </div>
 
