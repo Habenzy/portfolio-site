@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { firestore, storage, auth } from "../firebase/firebase_config";
-import { setDoc, doc, updateDoc } from "firebase/firestore";
+import { setDoc, doc, updateDoc, getDocs, query, collection } from "firebase/firestore";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
 
@@ -85,6 +85,18 @@ export default function Uploader(props) {
       }
     });
   });
+
+  useEffect(() => {
+    getDocs(query(collection(firestore, gallery)))
+      .then((querySnapshot) => {
+        let imgData = [];
+        querySnapshot.forEach((doc) => {
+          imgData.push(doc.data());
+        });
+        setEditImages(imgData);
+      })
+      .catch((err) => console.log(err.message));
+  }, [gallery]);
 
   const handleSignIn = (evt) => {
     evt.preventDefault();
@@ -181,6 +193,15 @@ export default function Uploader(props) {
         />
         <input type="submit" />
       </form>
+      <ul>
+        {editImages.map((image, index) => {
+          return(
+            <li key={index} >
+              <EditEntry url={image.url} title={image.title} blurb={image.blurb}/>
+            </li>
+          )
+        })}
+      </ul>
     </div>
   );
 }
