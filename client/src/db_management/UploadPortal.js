@@ -197,7 +197,7 @@ export default function Uploader(props) {
         {editImages.map((image, index) => {
           return(
             <li key={index} >
-              <EditEntry url={image.url} title={image.title} blurb={image.blurb}/>
+              <EditEntry url={image.url} title={image.title} blurb={image.blurb} gallery={gallery}/>
             </li>
           )
         })}
