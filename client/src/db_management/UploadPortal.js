@@ -1,31 +1,32 @@
 import { useState, useEffect } from "react";
 import { firestore, storage, auth } from "../firebase/firebase_config";
-import { setDoc, doc } from "firebase/firestore";
+import { setDoc, doc, updateDoc } from "firebase/firestore";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
 
 function EditEntry(props) {
-  const [editName, setEditName] = useState("");
+  const [editTitle, setEditTitle] = useState("");
   const [editBlurb, setEditBlurb] = useState("");
-  const [editDate, setEditDate] = useState("");
-console.log("names", editName, props.name)
-console.log('dates')
+
+  console.log("names", editTitle, props.title);
+  console.log("dates");
   function updateGalleryEntry() {
-    const imageDoc = doc(db, props.gallery, props.name);
+    const imageDoc = doc(firestore, props.gallery, props.title);
     updateDoc(imageDoc, {
-      name: editName || props.name,
+      title: editTitle || props.title,
       blurb: editBlurb || props.blurb,
-      date: editDate || props.date,
-    }).then(res => {
-      alert("update successful")
-    }).catch(err => {
-      alert(`update failed: ${err.message}`)
-    });
+    })
+      .then((res) => {
+        alert("update successful");
+      })
+      .catch((err) => {
+        alert(`update failed: ${err.message}`);
+      });
   }
 
   return (
     <div>
-      <img className="edit-thumb" src={props.url} alt={props.name} />
+      <img className="edit-thumb" src={props.url} alt={props.title} />
       <form
         className="edit-images"
         onSubmit={(evt) => {
@@ -33,29 +34,19 @@ console.log('dates')
           updateGalleryEntry();
         }}
       >
-        <label htmlFor="file-name">Image name: </label>
+        <label htmlFor="file-name">Image Title: </label>
         <br></br>
         <input
           onChange={(evt) => {
-            setEditName(evt.target.value);
+            setEditTitle(evt.target.value);
           }}
-          value={editName}
+          value={editTitle}
           name="file-name"
           type="text"
-          placeholder={props.name}
+          placeholder={props.title}
         />
         <br></br>
-        <label htmlFor="date-taken">Date taken: </label>
-        <br></br>
-        <input
-          onChange={(evt) => {
-            setEditDate(evt.target.value);
-          }}
-          value={editDate}
-          name="date-taken"
-          type="date"
-        />
-        <br></br>
+      
         <label htmlFor="edit-blurb">
           Description that will appear under the image:
         </label>
@@ -81,6 +72,7 @@ export default function Uploader(props) {
   const [blurb, setBlurb] = useState("");
 
   const [gallery, setGallery] = useState("nerdery");
+  const [editImages, setEditImages] = useState([]);
 
   const [user, setUser] = useState(null);
   const [email, setEmail] = useState("");
@@ -139,11 +131,11 @@ export default function Uploader(props) {
   };
 
   return user ? (
+    <div>
     <form onSubmit={uploadEntry}>
       <input
         type="file"
         name="image"
-
         onChange={(evt) => setImg(evt.target.files[0])}
       />
       <input
@@ -162,6 +154,8 @@ export default function Uploader(props) {
       />
       <input type="submit" />
     </form>
+    
+    </div>
   ) : (
     <div>
       <h3>Log In</h3>
