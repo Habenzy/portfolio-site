@@ -1,6 +1,13 @@
 import { useState, useEffect } from "react";
 import { firestore, storage, auth } from "../firebase/firebase_config";
-import { setDoc, doc, updateDoc, getDocs, query, collection } from "firebase/firestore";
+import {
+  setDoc,
+  doc,
+  updateDoc,
+  getDocs,
+  query,
+  collection,
+} from "firebase/firestore";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
 
@@ -46,7 +53,7 @@ function EditEntry(props) {
           placeholder={props.title}
         />
         <br></br>
-      
+
         <label htmlFor="edit-blurb">
           Description that will appear under the image:
         </label>
@@ -144,29 +151,42 @@ export default function Uploader(props) {
 
   return user ? (
     <div>
-    <form onSubmit={uploadEntry}>
-      <input
-        type="file"
-        name="image"
-        onChange={(evt) => setImg(evt.target.files[0])}
-      />
-      <input
-        type="text"
-        name="title"
-        placeholder="Title"
-        value={title}
-        onChange={(evt) => setTitle(evt.target.value)}
-      />
-      <input
-        type="text"
-        name="blurb"
-        placeholder="Blurb"
-        value={blurb}
-        onChange={(evt) => setBlurb(evt.target.value)}
-      />
-      <input type="submit" />
-    </form>
-    
+      <form onSubmit={uploadEntry}>
+        <input
+          type="file"
+          name="image"
+          onChange={(evt) => setImg(evt.target.files[0])}
+        />
+        <input
+          type="text"
+          name="title"
+          placeholder="Title"
+          value={title}
+          onChange={(evt) => setTitle(evt.target.value)}
+        />
+        <input
+          type="text"
+          name="blurb"
+          placeholder="Blurb"
+          value={blurb}
+          onChange={(evt) => setBlurb(evt.target.value)}
+        />
+        <input type="submit" />
+      </form>
+      <ul>
+        {editImages.map((image, index) => {
+          return (
+            <li key={index}>
+              <EditEntry
+                url={image.url}
+                title={image.title}
+                blurb={image.blurb}
+                gallery={gallery}
+              />
+            </li>
+          );
+        })}
+      </ul>
     </div>
   ) : (
     <div>
@@ -193,15 +213,6 @@ export default function Uploader(props) {
         />
         <input type="submit" />
       </form>
-      <ul>
-        {editImages.map((image, index) => {
-          return(
-            <li key={index} >
-              <EditEntry url={image.url} title={image.title} blurb={image.blurb} gallery={gallery}/>
-            </li>
-          )
-        })}
-      </ul>
     </div>
   );
 }
