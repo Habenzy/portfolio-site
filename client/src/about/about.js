@@ -19,7 +19,8 @@ export default function About(props) {
           <a href="/current-stauss-resume.pdf" download>
             click here to download my resume.
           </a>{" "}
-          You can also <a href="https://github.com/Habenzy">Click here</a> to check out my github.
+          You can also <a href="https://github.com/Habenzy">Click here</a> to check out my github,
+          or check out <a href="https://www.linkedin.com/in/robert-stauss-4b02a7170">my LinkedIn profile here</a>.
         </p>
       </div>
 
