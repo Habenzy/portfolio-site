@@ -1,28 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap");
 /* Header */
 #title-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #00000a;
+  background-image: linear-gradient(#00000a5e, #00000ab3, #00000a, #00000a)
+
+}
+
+#title-container .header-bg-img {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: radial-gradient(#00000a00, #00000a);
+}
+
+#title-container .header-bg-img img {
+  position: absolute;
+  overflow: hidden;
+  max-width: 100vw;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  z-index: -1;
 }
 
 #title-container h1 {
   font-size: 8rem;
   font-weight: 700;
-  font-family: 'Tangerine';
+  font-family: "Tangerine";
+  
 }
 
 #h-subtitle {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 70%
-}
-
-.flicker {
-  animation: flicker 1.5s infinite alternate;
+  width: 70%;
+  background-color: #00000a;
 }
 
 .dot {
@@ -34,39 +52,14 @@
 
 .neon {
   color: #fff;
-  text-shadow:
-      0 0 7px #fff,
-      0 0 10px #fff,
-      0 0 21px #fff,
-      0 0 42px #0af,
-      0 0 82px #0af,
-      0 0 92px #0af,
-      0 0 102px #0af,
-      0 0 151px #0af;
-}
-
-@keyframes flicker {
-  0%, 18%, 22%, 25%, 53%, 57%, 100% {
-    text-shadow:
-      0 0 7px #fff,
-      0 0 10px #fff,
-      0 0 21px #fff,
-      0 0 42px #0af,
-      0 0 82px #0af,
-      0 0 92px #0af,
-      0 0 102px #0af,
-      0 0 151px #0af;
-  }
-  20%, 23% {       
-    text-shadow: none;
-  }
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0af,
+    0 0 82px #0af, 0 0 92px #0af, 0 0 102px #0af, 0 0 151px #0af;
 }
 
 /* Footer */
 
 #footer {
   background-color: #00000a;
-  
 }
 
 #footer a {
@@ -89,13 +82,10 @@
 #page-container nav a {
   text-decoration: none;
   color: #fff;
-  text-shadow:
-      0 0 7px #fff,
-      0 0 10px #fff,
-      0 0 21px #0af;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #0af;
 }
 
-#page-container nav a:hover{
+#page-container nav a:hover {
   animation: flicker 1s infinite alternate;
 }
 
@@ -105,7 +95,6 @@
   justify-content: space-between;
 }
 
-
 /* Responsive header and nav styling */
 
 @media screen and (max-width: 620px) {
@@ -114,32 +103,31 @@
   }
 
   #h-subtitle {
-    width: 100%
+    width: 100%;
   }
 
   #page-container nav {
-    height: auto
+    height: auto;
   }
 
   #page-container nav #page-nav {
     flex-direction: column;
-    width: auto
+    width: auto;
   }
 
   #page-container nav #page-nav a {
-    margin: 10px 0
+    margin: 10px 0;
   }
 }
 
 /* Misc Global Styling */
 
 p {
-
 }
 
 a {
   text-decoration: none;
-  color: #6a09e9
+  color: #6a09e9;
 }
 
 a:hover {
@@ -151,15 +139,15 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: radial-gradient(#fff,#fff, #00000a 70%);
+  background-image: radial-gradient(#fff, #fff, #00000a 70%);
 }
 
 .center-wrapper > * {
   max-width: 70%;
 }
 
-@import url('./home/home.css');
-@import url('./about/about.css');
-@import url('./projects/projects.css');
-@import url('./gallery/gallery.css');
-@import url('./nerdy_shit/nerdery.css');
+@import url("./home/home.css");
+@import url("./about/about.css");
+@import url("./projects/projects.css");
+@import url("./gallery/gallery.css");
+@import url("./nerdy_shit/nerdery.css");
