@@ -14,9 +14,7 @@ export default function Projects(props) {
 
     {img: "", title: "Burlington Code Academy LMS", desc: "The BCA LMS was my first major software project. I worked on it in conjunction with our head of development (also Josh Burke), and in house software developer Nick. I was responsible for the student progress tracking, and slide deck integration portions of the system.", link: "https://burlingtoncodeacademy.com/", linkText: "Talk to the folks at BCA for more info!"},
 
-    {img: "", title: "Text Adventure", desc: "A little text adventure game built during my tenure as the lead instructor for BCA. Originally this was built out as an example for one of the weekly projects, but then I just kept adding to it. Will it ever be finished with a coherent story? Maybe, but I wouldn't hold my breath for it.", link: "https://github.com/Habenzy/adventure-game", linkText: "View the source code on Github. Feel free to use it for your own projects, just give me credit if you're using it in a paid application!"},
-
-    {img: "", title: "Tic Tac Toe", desc: "Built during my time as a student at BCA it's Tic Tac Toe! The AI is pretty good, but not perfect, if you start in the upper right hand corner of the one player version you can sometimes win. Play around with some of the different modes and features to see what's in there.", link: "http://awesome-tic-tac-toe.herokuapp.com/", linkText: "Check out the hosted version here!"}
+    {img: "", title: "Text Adventure", desc: "A little text adventure game built during my tenure as the lead instructor for BCA. Originally this was built out as an example for one of the weekly projects, but then I just kept adding to it. Will it ever be finished with a coherent story? Maybe, but I wouldn't hold my breath for it. I recently threw the game logic into an express server, built a simple React front end with Vite, and made it run on the web. It's not hosted anywhere yet, but someday soon it will be.", link: "https://github.com/Habenzy/adventure-game", linkText: "View the source code on Github. Now built to work in the browser!"},
   ]);
   return (
     <div id="project-list" className="center-wrapper">
@@ -32,7 +30,7 @@ function ProjectDetail(props) {
     <div class="project-disp">
       <h2 class="proj-title">{props.title}</h2>
       <div class="proj-details">
-        {/* <img src={props.img} alt={props.title} /> */}
+        {props.img && <img src={props.img} alt={props.title} /> }
         <p class="blurb">{props.desc}</p>
         <a href={props.link}>{props.linkText}</a>
       </div>
