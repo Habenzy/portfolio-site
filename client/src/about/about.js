@@ -118,8 +118,7 @@ export default function About(props) {
         <p>
           I loved my time at BCA, but after 3 years, 8 cohorts, and rewriting
           the entire curriculum a couple of times I was beginning to get a bit
-          burnt out. The 50-60hr weeks (with 45 of that being spent teaching a
-          class through Zoom) and lack of vacation time certainly didn't help.
+          burnt out.
           So when the CEO of BCA bought the company out with his new company
           (Upright ED) I decided to go my own way.
         </p>
@@ -132,10 +131,9 @@ export default function About(props) {
           what a backend developer is than I do. They're a Hubspot based design and
           marketing company with a very heavy focus on the marketing aspects,
           and very little knowledge of web development. I learned a whole lot
-          about Hubspot, but their idea of "backend programming" was pretty much
-          anything JavaScript. It was a good learning experience, but it wasn't
-          really what I was looking to be doing, and so I decided to leave them after 6 months.
-        </p>
+          about Hubspot, but we had different ideas about what a backend developer does (I was looking for something a little more technically challenging). It was a good learning experience, but it wasn't
+          really what I was looking to be doing.
+          </p>
       </div>
     </div>
   );
