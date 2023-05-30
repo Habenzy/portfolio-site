@@ -45,6 +45,15 @@ export default function Gallery(props) {
 
   return props.entries.length ? (
     <div id="gallery-shell">
+      <select
+          name="sort-by"
+          id="select-sort"
+          onChange={(evt) => setSortBy(evt.target.value)}
+        >
+          <option value="">-----------</option>
+          <option value="name">Name</option>
+          <option value="date">Date</option>
+        </select>
       <button
         className="toggle"
         onClick={(evt) => {
@@ -54,14 +63,8 @@ export default function Gallery(props) {
         Ascending/Descending
       </button>
       {props.tags && (
-        <select
-          name="sort-by"
-          id="select-sort"
-          onChange={(evt) => setSortBy(evt.target.value)}
-        >
-          <option value="">-----------</option>
-          <option value="name">Name</option>
-          <option value="date">Date</option>
+        <select name="tag-list" onChange={(evt) => setFilterTag(evt.target.value)}>
+          {props.tags.map(tag => <option name={tag} value="tag">tag</option>)}
         </select>
       )}
       <div id="gallery-container">
