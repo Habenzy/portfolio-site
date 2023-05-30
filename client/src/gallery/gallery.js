@@ -15,6 +15,10 @@ export default function Gallery(props) {
 
   useEffect(() => {
     //filter out images without the chosen tag
+    let filtered = props.entries.filter(entry => {
+      return entry.tags.includes(filterTag)
+    })
+    props.updater(filtered)
     //multi tag select will be a future feature
   }, [filterTag]);
 
