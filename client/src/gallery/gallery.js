@@ -10,7 +10,7 @@ export default function Gallery(props) {
 
   useEffect(() => {
     //ascending/descending order
-
+    return !ascending ? props.updater(props.entries.toReversed()) : null
   }, [ascending])
 
   useEffect(() => {
@@ -28,7 +28,7 @@ export default function Gallery(props) {
       <button className="toggle" onClick={(evt) => {
         setAscending(!ascending)
       }}>Ascending/Descending</button>
-      {props.tags ? }
+      {props.tags && <select></select>}
       <div id="gallery-container">
         <div className="gallery">
           {props.entries.map((pic, index) => {
