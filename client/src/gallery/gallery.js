@@ -6,7 +6,7 @@ export default function Gallery(props) {
   let [focused, setFocused] = useState(0);
   let [filterTag, setFilterTag] = useState(false);
   let [ascending, setAscending] = useState(true);
-  let [sortBy, setSortBy] = useState()
+  let [sortBy, setSortBy] = useState("")
 
   useEffect(() => {
     //ascending/descending order
@@ -21,6 +21,11 @@ export default function Gallery(props) {
 
   useEffect(() => {
     //sort image array from props "props.entries" then update through prop setState "props.updater"
+    let sorted;
+    switch(sortBy) {
+      case "": break;
+      case "name": sorted = props.entries.toSorted((this, next) => {return this.name > next.name})
+    }
   }, [sortBy])
 
   return props.entries.length ? (
@@ -28,7 +33,11 @@ export default function Gallery(props) {
       <button className="toggle" onClick={(evt) => {
         setAscending(!ascending)
       }}>Ascending/Descending</button>
-      {props.tags && <select></select>}
+      {props.tags && <select name="sort-by" id="select-sort" onChange={(evt) => setSortBy(evt.target.value)}>
+        <option value="">-----------</option>
+        <option value="name">Name</option>
+        <option value="date">Date</option>
+        </select>}
       <div id="gallery-container">
         <div className="gallery">
           {props.entries.map((pic, index) => {
