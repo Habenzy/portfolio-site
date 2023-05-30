@@ -34,7 +34,7 @@ export default function Nerdery(props) {
           on World Anvil.
         </a>
       </p>
-      <Gallery entries={dndStuff}/>
+      <Gallery entries={dndStuff} updater={setDnDStuff}/>
     </div>
   );
 }
