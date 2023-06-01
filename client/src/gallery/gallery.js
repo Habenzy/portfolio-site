@@ -14,7 +14,7 @@ export default function Gallery(props) {
     let flipped = props.entries.toReversed();
     console.log(props.updater)
     console.log(flipped)
-    return !ascending ? props.updater(flipped) : null;
+    props.updater(flipped);
   }, [ascending]);
 
   useEffect(() => {
