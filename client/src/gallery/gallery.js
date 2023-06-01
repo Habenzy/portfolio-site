@@ -12,6 +12,8 @@ export default function Gallery(props) {
     console.log("flipping")
     //ascending/descending order
     let flipped = props.entries.toReversed();
+    console.log(props.updater)
+    console.log(flipped)
     return !ascending ? props.updater(flipped) : null;
   }, [ascending]);
 
