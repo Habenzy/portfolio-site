@@ -43,7 +43,7 @@ export default function Gallery(props) {
     props.updater(sorted)
   }, [sortBy]);
 
-  return props.entries.length ? (
+  return props.entries && props.entries.length ? (
     <div id="gallery-shell">
       <select
           name="sort-by"
