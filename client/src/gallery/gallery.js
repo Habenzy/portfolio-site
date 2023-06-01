@@ -9,23 +9,25 @@ export default function Gallery(props) {
   let [sortBy, setSortBy] = useState("");
 
   useEffect(() => {
+    console.log("flipping")
     //ascending/descending order
-    let flipped = props.entries.toReversed()
+    let flipped = props.entries.toReversed();
     return !ascending ? props.updater(flipped) : null;
   }, [ascending]);
 
   useEffect(() => {
+    console.log(`filtering by tag ${filterTag}`)
     //filter out images without the chosen tag
-    let filtered = props.entries.filter(entry => {
-      return entry.tags.includes(filterTag)
-    })
-    props.updater(filtered)
+    let filtered = props.entries.filter((entry) => {
+      return entry.tags.includes(filterTag);
+    });
+    props.updater(filtered);
     //multi tag select will be a future feature
   }, [filterTag]);
 
   useEffect(() => {
     //sort image array from props "props.entries" then update through prop setState "props.updater"
-    console.log(`sorting by ${sortBy}`)
+    console.log(`sorting by ${sortBy}`);
     let sorted;
     switch (sortBy) {
       case "name":
@@ -42,20 +44,23 @@ export default function Gallery(props) {
         break;
     }
 
-    props.updater(sorted)
+    props.updater(sorted);
   }, [sortBy]);
 
-  return (props.entries && props.entries.length) ? (
+  return props.entries && props.entries.length ? (
     <div id="gallery-shell">
       <select
-          name="sort-by"
-          id="select-sort"
-          onChange={(evt) => setSortBy(evt.target.value)}
-        >
-          <option value="">-----------</option>
-          <option value="name">Name</option>
-          <option value="date">Date</option>
-        </select>
+        name="sort-by"
+        id="select-sort"
+        onChange={(evt) => {
+          console.log(evt.target);
+          setSortBy(evt.target.value);
+        }}
+      >
+        <option value="">-----------</option>
+        <option value="name">Name</option>
+        <option value="date">Date</option>
+      </select>
       <button
         className="toggle"
         onClick={(evt) => {
@@ -65,8 +70,18 @@ export default function Gallery(props) {
         Ascending/Descending
       </button>
       {props.tags && (
-        <select name="tag-list" onChange={(evt) => setFilterTag(evt.target.value)}>
-          {props.tags.map(tag => <option name={tag} value="tag">tag</option>)}
+        <select
+          name="tag-list"
+          onChange={(evt) => {
+            console.log(evt.target);
+            setFilterTag(evt.target.value);
+          }}
+        >
+          {props.tags.map((tag) => (
+            <option name={tag} value="tag">
+              tag
+            </option>
+          ))}
         </select>
       )}
       <div id="gallery-container">
