@@ -66,7 +66,8 @@ export default function Gallery(props) {
       <button
         className="toggle"
         onClick={(evt) => {
-          setAscending(!ascending);
+          let flipped = !ascending
+          setAscending(flipped);
         }}
       >
         Ascending/Descending
