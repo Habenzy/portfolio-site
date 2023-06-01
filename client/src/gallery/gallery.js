@@ -10,7 +10,8 @@ export default function Gallery(props) {
 
   useEffect(() => {
     //ascending/descending order
-    return !ascending ? props.updater(props.entries.toReversed()) : null;
+    let flipped = props.entries.toReversed()
+    return !ascending ? props.updater(flipped) : null;
   }, [ascending]);
 
   useEffect(() => {
@@ -24,6 +25,7 @@ export default function Gallery(props) {
 
   useEffect(() => {
     //sort image array from props "props.entries" then update through prop setState "props.updater"
+    console.log(`sorting by ${sortBy}`)
     let sorted;
     switch (sortBy) {
       case "name":
