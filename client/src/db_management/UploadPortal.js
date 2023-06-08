@@ -7,6 +7,7 @@ import {
   getDocs,
   query,
   collection,
+  deleteDoc
 } from "firebase/firestore";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
@@ -28,6 +29,17 @@ function EditEntry(props) {
       })
       .catch((err) => {
         alert(`update failed: ${err.message}`);
+      });
+  }
+
+  function deleteEntry() {
+    const imageDoc = doc(firestore, props.gallery, props.title);
+    deleteDoc(imageDoc)
+      .then((res) => {
+        alert("delete successful");
+      })
+      .catch((err) => {
+        alert(`delete failed: ${err.message}`);
       });
   }
 
@@ -69,6 +81,7 @@ function EditEntry(props) {
         />
         <input type="submit" />
       </form>
+      <button onClick={deleteDoc}>Delete</button>
     </div>
   );
 }
